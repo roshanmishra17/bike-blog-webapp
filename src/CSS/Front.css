@@ -1,0 +1,53 @@
+.front{
+    position: relative;
+    background: url('https://wallpaperbat.com/img/9694127-continental-gt-650-picture-download.jpg') center/cover no-repeat;
+    height: 85vh;
+    padding-top: 245px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.front-text{
+    font-family: poppins,sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0); 
+    padding: 20px 40px;
+    border-radius: 15px;
+}
+.front-text h1{
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: italic;
+}
+.front-text p{
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+    color: rgb(255, 251, 251);
+}
+.front button{
+    padding: 10px 20px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.front button:hover{
+    scale: calc(1.03);
+}
+.front button:active{
+    color: white;
+    background: black;
+}
+.front button a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width : 768px){
+    .front{
+        height: 75vh;
+    }
+}

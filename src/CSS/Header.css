@@ -1,0 +1,201 @@
+.container{
+  color: rgb(255, 253, 253);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  font-family: poppins, sans-serif;
+  position: fixed;     
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: transparent; /* make it transparent */
+  box-shadow: none; 
+  transition: background 0.3s ease;
+}
+.logo h1{
+  font-family: "Playwrite DE SAS", cursive;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0,0.2);
+  border-radius: 5px;
+  padding: 10px;
+}
+.scroll{
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  font-family: poppins, sans-serif;
+  position: fixed;      /* fix header on top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgb(0, 0, 0);
+  box-shadow: none; 
+}
+.nav ul{
+  display: flex;
+  gap: 30px;
+}
+
+.nav ul li{ 
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.nav ul li:hover{ 
+  transform: scale(1.05);
+}
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+.search-bar {
+  display: flex;
+  max-width: 500px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 25px;
+  padding: 5px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 25px;
+}
+.search-bar button {
+  background: rgb(29, 24, 24);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition:  all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: rgb(36, 35, 32);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+
+  .logo h1{
+    font-size: 1.6rem;
+  }
+
+  .container{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 40px;
+    font-family: poppins, sans-serif;
+    position: fixed;      /* fix header on top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: transparent; /* make it transparent */
+    box-shadow: none; 
+  }
+  .scroll{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 40px;
+    font-family: poppins, sans-serif;
+    position: fixed;   
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgb(0, 0, 0);
+    box-shadow: none; 
+  }
+  /* Hamburger menu */
+  .hamburger {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 20; /* above nav */
+  }
+
+  .nav {
+    color: white;
+    position: fixed; /* fix to viewport */
+    top: 0;
+    left: 0;
+    width: 250px; /* menu width */
+    height: 100vh; /* full height */
+    background-color:black;
+    transform: translateX(-100%); /* hidden to the left */
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px; /* space for header */
+  }
+
+  .nav.open {
+    transform: translateX(0); /* slide in */
+    opacity: 1;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav ul li {
+    margin: 20px 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .nav ul li a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .nav ul li a:hover {
+    transform: scale(1.05);
+  }
+}

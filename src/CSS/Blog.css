@@ -1,0 +1,136 @@
+.Blog {
+  max-width: 700px;           /* limit width for readability */
+  background-color: #1a1111;  /* dark card background */
+  color: #fff;
+  margin: 40px auto;          /* center horizontally */
+  padding: 25px 30px;
+  border-radius: 15px;        /* rounded corners */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4); /* subtle shadow */
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Blog:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;        /* circle profile */
+  object-fit: cover;
+  background-color: #fff;
+  border: 2px solid rgb(203, 203, 203); /* optional accent border */
+}
+
+.user-detail h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.user-detail p {
+  margin: 2px 0 0 0;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.para {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+/* Slider Container for buttons and posts */
+.slider-container {
+  max-width: 700px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.h3{
+  color: #ffffff;
+  font-family: poppins,sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+.h3::after{
+  content: "";
+  width: 100px;
+  height: 3px;
+  background: rgb(193, 192, 192);
+  display: block;
+  margin: 10px auto;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden; /* show only one post at a time */
+}
+
+.posts-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Each Blog card stays as your existing style, min-width needed for flex sliding */
+.posts-container .Blog {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.left-btn,
+.right-btn {
+  background-color:transparent;
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.left-btn:hover,
+.right-btn:hover {
+  background-color: #908b8b;
+  color: rgb(48, 33, 33);
+}
+
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .Blog {
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .info img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .user-detail h3 {
+    font-size: 1rem;
+  }
+
+  .para {
+    font-size: 0.9rem;
+  }
+
+
+  .left-btn,
+  .right-btn {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+  }
+}

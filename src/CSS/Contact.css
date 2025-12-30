@@ -1,0 +1,213 @@
+.contact-section {
+  background: #362727;
+  color: #fff;
+  padding: 80px 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+  color: #f5b942;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE INFO */
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f5b942;
+}
+
+.contact-info p {
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.info-item i {
+  color: #f5b942;
+  font-size: 1.2rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f5b942;
+}
+
+/* RIGHT SIDE FORM */
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+  background: #1a1111;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;             
+  margin: 15px 0;
+  color: #ccc;
+}
+
+.form-check input[type="checkbox"] {
+  width: 18px;     
+  height: 18px;
+  margin: 0;           
+  cursor: pointer;
+}
+
+.form-check label {
+  cursor: pointer;     
+  font-size: 0.95rem;
+  margin: 0;            
+}
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #f5b942;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ffcf62;
+  transform: translateY(-2px);
+}
+
+
+.puzzle{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.puzzle-content {
+  background: #1a1111;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+.puzzle-content input {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+}
+
+.puzzle-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.puzzle-buttons button {
+  background: #f5b942;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.puzzle-buttons button:hover {
+  background: #ffcf62;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .contact-form {
+  min-width: 220px;
+  background: #1a1111;
+  padding:10px;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+  .contact-info, .contact-form {
+    width: 90%;
+  }
+}
